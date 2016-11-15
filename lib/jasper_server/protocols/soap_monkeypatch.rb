@@ -1,4 +1,5 @@
 require 'soap/rpc/driver'
+require 'soap/wsdlDriver'
 
 # Modify SOAP::RPC::Proxy class to return SOAP Message in addition to object mapping 
 # to access the SOAP attachments
