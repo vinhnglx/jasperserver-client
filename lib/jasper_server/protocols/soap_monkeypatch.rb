@@ -25,14 +25,14 @@ module SOAP
           :envelopenamespace => @options["soap.envelope.requestnamespace"],
           :default_encodingstyle =>
             @default_encodingstyle || op_info.request_default_encodingstyle,
-          :elementformdefault => op_info.elementformdefault,
+          :elementformdefault => true,
           :attributeformdefault => op_info.attributeformdefault
         )
         resopt = create_encoding_opt(
           :envelopenamespace => @options["soap.envelope.responsenamespace"],
           :default_encodingstyle =>
             @default_encodingstyle || op_info.response_default_encodingstyle,
-          :elementformdefault => op_info.elementformdefault,
+          :elementformdefault => true,
           :attributeformdefault => op_info.attributeformdefault
         )
         env = route(req_header, req_body, reqopt, resopt)
